@@ -36,4 +36,11 @@ describe('fizzbuz', () => {
   it('should return Buzz if number provided is 5', () => {
     expect(fizzbuzz(5)).toBe('Buzz')
   })
+
+  it('should return Buzz if number provided is multiple of 5', () => {
+    expect(fizzbuzz(10)).toBe('Buzz')
+    expect(fizzbuzz(20)).toBe('Buzz')
+    expect(fizzbuzz(25)).toBe('Buzz')
+    expect(fizzbuzz(50)).toBe('Buzz')
+  })
 })
