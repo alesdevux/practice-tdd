@@ -31,7 +31,6 @@ describe('canReconfigure', () => {
   })
 
   it('should return false if strings has different order of transformation', () => {
-    expect(canReconfigure('abc', 'cba')).toBe(false)
     expect(canReconfigure('XBOX', 'XXBO')).toBe(false)
   })
 })

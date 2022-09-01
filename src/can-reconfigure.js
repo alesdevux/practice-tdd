@@ -8,5 +8,16 @@ export const canReconfigure = (form, to) => {
   const hasSameUniqueCharacters = new Set(form).size === new Set(to).size
   if (!hasSameUniqueCharacters) return false
 
+  const transformations = {}
+  for (let i = 0; i < form.length; i++) {
+    const fromChar = form[i]
+    const toChar = to[i]
+
+    const sortedChar = transformations[fromChar]
+    if (sortedChar && sortedChar !== toChar) return false
+
+    transformations[fromChar] = toChar
+  }
+
   return true
 }
