@@ -11,7 +11,7 @@ describe('canReconfigure', () => {
   })
 
   it('should throw if second parameter is not a string', () => {
-    expect(() => canReconfigure('form', 1)).toThrow()
+    expect(() => canReconfigure('from', 1)).toThrow()
   })
 
   it('should return a boolean', () => {
