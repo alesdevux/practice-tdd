@@ -54,4 +54,8 @@ describe('fizzbuz', () => {
     expect(fizzbuzz(60)).toBe('FizzBuzz')
     expect(fizzbuzz(90)).toBe('FizzBuzz')
   })
+
+  it('should return Woff if number provided is 7', () => {
+    expect(fizzbuzz(7)).toBe('Woff')
+  })
 })
