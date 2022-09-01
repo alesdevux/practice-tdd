@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest'
 import { fizzbuzz } from '../src/fizzbuzz'
 
 describe('fizzbuz', () => {
-  it('should return fizz when number is divisible by 3', () => {
+  it('should be a function', () => {
     expect(typeof fizzbuzz).toBe('function')
   })
 
@@ -12,5 +12,9 @@ describe('fizzbuz', () => {
 
   it('should throw a specific error message if not number is provided as parameter', () => {
     expect(() => fizzbuzz()).toThrow('parameter provided must be a number')
+  })
+
+  it('should return 1 if number provided is 1', () => {
+    expect(fizzbuzz(1)).toBe(1)
   })
 })
