@@ -9,4 +9,8 @@ describe('fizzbuz', () => {
   it('should throw if not number is provided as parameter', () => {
     expect(() => fizzbuzz()).toThrow()
   })
+
+  it('should throw a specific error message if not number is provided as parameter', () => {
+    expect(() => fizzbuzz()).toThrow('parameter provided must be a number')
+  })
 })
