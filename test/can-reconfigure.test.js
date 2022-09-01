@@ -17,4 +17,8 @@ describe('canReconfigure', () => {
   it('should return a boolean', () => {
     expect(canReconfigure('a', 'b')).toBeTypeOf('boolean')
   })
+
+  it('should return false if strings provided have different length', () => {
+    expect(canReconfigure('abc', 'de')).toBe(false)
+  })
 })
