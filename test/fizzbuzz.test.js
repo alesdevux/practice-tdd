@@ -77,4 +77,11 @@ describe('fizzbuz', () => {
     expect(fizzbuzz(140)).toBe('BuzzWoff')
     expect(fizzbuzz(280)).toBe('BuzzWoff')
   })
+
+  it('should return FizzBuzzWoff if number provided is multiple of 105', () => {
+    expect(fizzbuzz(210)).toBe('FizzBuzzWoff')
+    expect(fizzbuzz(420)).toBe('FizzBuzzWoff')
+    expect(fizzbuzz(630)).toBe('FizzBuzzWoff')
+    expect(fizzbuzz(840)).toBe('FizzBuzzWoff')
+  })
 })
