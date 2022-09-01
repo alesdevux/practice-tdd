@@ -2,9 +2,14 @@ export const fizzbuzz = (number) => {
   if (typeof number !== 'number') throw new Error('parameter provided must be a number')
   if (Number.isNaN(number)) throw new Error('parameter provided must be a number')
 
-  if (number % 15 === 0) return 'FizzBuzz'
-  if (number % 3 === 0) return 'Fizz'
-  if (number % 5 === 0) return 'Buzz'
+  const multiples = { 3: 'Fizz', 5: 'Buzz' }
+  let output = ''
 
-  return number
+  Object
+    .entries(multiples)
+    .forEach(([multiple, word]) => {
+      if (number % multiple === 0) output += word
+    })
+
+  return output || number
 }
