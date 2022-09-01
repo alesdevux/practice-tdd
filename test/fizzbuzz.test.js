@@ -14,6 +14,10 @@ describe('fizzbuz', () => {
     expect(() => fizzbuzz()).toThrow('parameter provided must be a number')
   })
 
+  it('should throw a specific error message not number is provided', () => {
+    expect(() => fizzbuzz(NaN)).toThrow('parameter provided must be a number')
+  })
+
   it('should return 1 if number provided is 1', () => {
     expect(fizzbuzz(1)).toBe(1)
   })
