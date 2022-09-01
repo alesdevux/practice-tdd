@@ -5,4 +5,8 @@ describe('canReconfigure', () => {
   it('should be a function', () => {
     expect(typeof canReconfigure).toBe('function')
   })
+
+  it('should throw if first parameter is missing', () => {
+    expect(() => canReconfigure()).toThrow()
+  })
 })
