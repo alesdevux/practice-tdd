@@ -22,6 +22,10 @@ describe('canReconfigure', () => {
     expect(canReconfigure('abc', 'de')).toBe(false)
   })
 
+  it('should return false if strings provided have different length even with same unique letters', () => {
+    expect(canReconfigure('tdd', 'td')).toBe(false)
+  })
+
   it('should return false if strings provided have different number of unique characters', () => {
     expect(canReconfigure('abc', 'tdd')).toBe(false)
   })
