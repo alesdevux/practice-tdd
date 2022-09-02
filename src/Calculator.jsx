@@ -11,7 +11,8 @@ const Calculator = () => {
   const [value, setValue] = useState('')
 
   const createHandlerCell = (cell) => {
-    setValue(value.concat(cell))
+    const signEqual = cell === '='
+    signEqual ? setValue(eval(value)) : setValue(value + cell)
   }
 
   return (
