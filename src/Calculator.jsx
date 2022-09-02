@@ -10,6 +10,10 @@ const rows = [
 const Calculator = () => {
   const [value, setValue] = useState('')
 
+  const createHandlerCell = (cell) => {
+    setValue(value.concat(cell))
+  }
+
   return (
     <>
       <h1>Calculator</h1>
@@ -20,7 +24,7 @@ const Calculator = () => {
             {row.map((cell) => (
               <button
                 role='cell' key={cell}
-                onClick={() => setValue(value.concat(cell))}
+                onClick={() => createHandlerCell(cell)}
               >
                 {cell}
               </button>
