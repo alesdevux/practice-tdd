@@ -1,9 +1,17 @@
-import { render } from '@testing-library/react'
-import { describe, it } from 'vitest'
+import { cleanup, render, screen } from '@testing-library/react'
+import { afterEach, describe, it } from 'vitest'
 import Calculator from '../src/Calculator'
 
 describe('Calculator', () => {
+  afterEach(cleanup)
+
   it('should render', () => {
     render(<Calculator />)
+  })
+
+  it('should render title correctly', () => {
+    render(<Calculator />)
+
+    screen.getByText('Calculator')
   })
 })

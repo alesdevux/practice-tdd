@@ -1,6 +1,8 @@
 const Calculator = () => {
   return (
-    <div>Calculator</div>
+    <>
+      <h1>Calculator</h1>
+    </>
   )
 }
 export default Calculator
