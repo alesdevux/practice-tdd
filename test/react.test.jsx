@@ -37,4 +37,9 @@ describe('Calculator', () => {
     render(<Calculator />)
     screen.getByText('=')
   })
+
+  it('should render an input', () => {
+    render(<Calculator />)
+    screen.getByRole('textbox')
+  })
 })
