@@ -90,4 +90,21 @@ describe('Calculator', () => {
     const input = screen.getByRole('textbox')
     expect(input.value).toBe('1+2')
   })
+
+  it('should return a result after clicking equal sign', () => {
+    render(<Calculator />)
+
+    const one = screen.getByText('1')
+    const plus = screen.getByText('+')
+    const two = screen.getByText('2')
+    const equal = screen.getByText('=')
+
+    fireEvent.click(one)
+    fireEvent.click(plus)
+    fireEvent.click(two)
+    fireEvent.click(equal)
+
+    const input = screen.getByRole('textbox')
+    expect(input.value).toBe('3')
+  })
 })
