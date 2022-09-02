@@ -32,4 +32,9 @@ describe('Calculator', () => {
     render(<Calculator />)
     operators.forEach(operator => screen.getByText(operator))
   })
+
+  it('should render equal sign', () => {
+    render(<Calculator />)
+    screen.getByText('=')
+  })
 })
