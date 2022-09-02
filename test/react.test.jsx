@@ -1,5 +1,5 @@
 import { cleanup, render, screen } from '@testing-library/react'
-import { afterEach, describe, it } from 'vitest'
+import { afterEach, describe, expect, it } from 'vitest'
 import Calculator from '../src/Calculator'
 
 const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -19,5 +19,11 @@ describe('Calculator', () => {
   it('should render numbers', () => {
     render(<Calculator />)
     numbers.forEach(number => screen.getByText(number))
+  })
+
+  it('should render 4 rows', () => {
+    render(<Calculator />)
+    const rows = screen.getAllByRole('row')
+    expect(rows).toHaveLength(4)
   })
 })
