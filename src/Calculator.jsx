@@ -1,3 +1,5 @@
+import { useState } from "react"
+
 const rows = [
   [7, 8, 9, '/'],
   [4, 5, 6, '*'],
@@ -6,15 +8,22 @@ const rows = [
 ]
 
 const Calculator = () => {
+  const [value, setValue] = useState('')
+
   return (
     <>
       <h1>Calculator</h1>
-      <input />
+      <input value={value} />
       <div role='grid'>
         {rows.map((row, rowIndex) => (
           <div role='row' key={rowIndex}>
             {row.map((cell) => (
-              <span role='cell' key={cell}>{cell}</span>
+              <button
+                role='cell' key={cell}
+                onClick={() => setValue(cell)}
+              >
+                {cell}
+              </button>
             ))}
           </div>
         ))}
