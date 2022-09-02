@@ -13,7 +13,7 @@ const Calculator = () => {
   return (
     <>
       <h1>Calculator</h1>
-      <input value={value} />
+      <input value={value} readOnly />
       <div role='grid'>
         {rows.map((row, rowIndex) => (
           <div role='row' key={rowIndex}>
