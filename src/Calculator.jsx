@@ -12,8 +12,8 @@ const Calculator = () => {
       <div role='grid'>
         {rows.map((row, rowIndex) => (
           <div role='row' key={rowIndex}>
-            {row.map((number) => (
-              <span role='number' key={number}>{number}</span>
+            {row.map((cell) => (
+              <span role='cell' key={cell}>{cell}</span>
             ))}
           </div>
         ))}
