@@ -3,6 +3,7 @@ import { afterEach, describe, expect, it } from 'vitest'
 import Calculator from '../src/Calculator'
 
 const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+const operators = ['+', '-', '*', '/']
 
 describe('Calculator', () => {
   afterEach(cleanup)
@@ -25,5 +26,10 @@ describe('Calculator', () => {
     render(<Calculator />)
     const rows = screen.getAllByRole('row')
     expect(rows).toHaveLength(4)
+  })
+
+  it('should render operators', () => {
+    render(<Calculator />)
+    operators.forEach(operator => screen.getByText(operator))
   })
 })
