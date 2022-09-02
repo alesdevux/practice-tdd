@@ -20,7 +20,7 @@ const Calculator = () => {
             {row.map((cell) => (
               <button
                 role='cell' key={cell}
-                onClick={() => setValue(cell)}
+                onClick={() => setValue(value.concat(cell))}
               >
                 {cell}
               </button>
